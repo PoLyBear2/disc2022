@@ -1,0 +1,64 @@
+<html><head><title>원주율 찾기</title></head><body>
+    <h1>17101351</h1>
+    <div style="width:80vw"><canvas id="myChart"></canvas></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    kk = 0
+    nt = []
+    pt = []
+    lb = []
+    pc = []
+    for ( i=0 ; i<100000001 ; i++ ) {
+      x = Math.random()
+      y = Math.random()
+      if ( (x*x+y*y) < 1 ) kk++
+      if ( i == 100 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 1000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 10000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 100000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 1000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 10000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 20000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 30000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 40000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 50000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 60000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 70000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 80000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 90000000 ) {padd(i,kk); lb[lb.length] = i}
+      if ( i == 100000000 ) {padd(i,kk); lb[lb.length] = i}
+    }
+    function padd(t,k) {
+      alert(t + ":" + k + ":" + 4*k/t)
+      nt.push(t); pt.push(4*k/t); pc.push(3.14159265)
+    }
+
+    const ctx = document.getElementById('myChart').getContext('2d')
+
+    const data = {
+        labels : lb,
+        datasets: [{
+            label:'Pi by probability',
+            lineTension : 0.3,
+            backgroundColor: 'red',
+            borderColor: 'blue',
+            data: pt
+            },
+            {  
+            label:'pi',
+            backgroundColor: 'grey',
+            borderColor: 'green',
+            data: pc
+            }
+        ]
+    }
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    }
+
+    const myChart = new Chart(ctx, config)
+    </script>
+    </body></html>
