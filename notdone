@@ -1,86 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>할일 목록 앱</title>
-	<style>
-		#add-btn{
-			padding: 5px 10px;
-			border: 0;
-			background: #f80; color: white;
-			border-radius: 5px;
-		}
-		ul{ 
-			padding: 0; 
-			list-style-position: inside;
-		}
-		li{
-			border-bottom: 1px solid #999;
-			padding: 5px 0;
-		}
-		.active{ background: #abc; } /* step3: 목록 클릭 스타일 */
-	</style>
-</head>
-<body>
-	
-	<h1 id='title'>내가 수강한 과목</h1>
-	<table border=1>
-	  <tr><th>1-1</th><th>1-2</th></tr>
-		<tr><td>미적분<br>컴개론</td><td>화학<br>물리</td></tr>
-	  <tr><th>2-1</th><th>2-2</th></tr>
-		<tr><td>실험<br>컴퓨터구조</td><td>회로이론<br>전자기학</td></tr>
-
-	</table>
-	
-	<h1 id='title'>내 관심 분야</h1>
-	<table border=1>
-		<tr><td>미적분</td></tr>
-		<tr><td>영어</td></tr>
-		<tr><td>물리</td></tr>
-		<tr><td>화학</td></tr>
-	</table>
-	
-	<h1 id='title'>프로젝트 주제</h1>
-	<table border=1>
-		<tr><th>운동</th><th>음악</th></tr>
-		<tr><td>농구<br>야구</td><td>락<br>발라드</td></tr>
-		<tr><th>게임</th><th>공부</th></tr>
-		<tr><td>롤<br>배틀필드</td><td>머신러닝<br>파이썬</td></tr>
-	</table>
-
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style> div { position: relative; width:80vw; margin: auto } </style>
+</head><body>
+<div style="width:80vw"><h1>SQRT2 Calculation by 과기인</h1>
+<canvas id="myChart"></canvas></div>
 <script>
-
-	// 변수 초기화
-	var title = document.getElementById('title'); 
-	var list = document.getElementById('list');
-	var li = list.getElementsByTagName('li');
-	var addBtn = document.getElementById('add-btn');	// 목록 추가 버튼
-
-	// 이벤트리스너
-	list.addEventListener('click', activeItem); 
-
-	function activeItem(event){
-		// 클릭한 노드가 li이면 
-		if(event.target.nodeName == 'LI'){
-			// event.target은 클릭한 객체를 의미
-			title.innerHTML = event.target.innerText;	
-
-			// 목록 스타일 초기화
-			for(var i = 0; i < event.target.parentNode.children.length; i++){
-				event.target.parentNode.children[i].removeAttribute('class');
-			}
-			// 클릭한 목록 스타일 지정
-			event.target.setAttribute('class', 'active'); // 클릭한 대상			
-		}	// end if
-	}	// end function		
-
-	// 목록 추가
-	addBtn.addEventListener('click', function(){
-		var txt = prompt('제목 입력');
-		list.innerHTML += '<li>' + txt + '</li>';
-	});
-
-</script>	
-
-</body>
-</html>
+sqrt2try = []
+trialnum = []
+sqrt2val = []
+high = 2
+low = 1
+delta = 0.00000001
+for ( k=0 ; k<100 ; k++ ) {
+  sqrt2try[k] = (high + low)/2
+  sqrx = sqrt2try[k] * sqrt2try[k]
+  trialnum[k] = k+1
+  sqrt2val[k] = Math.SQRT2
+  if ( sqrx > 2 ) high = sqrt2try[k]
+  else if ( sqrx < 2 ) low = sqrt2try[k]
+  if ( Math.abs(2-sqrx) < delta ) break
+}
+document.querySelector("h1").innerHTML += " => " + sqrt2try[k]
+datainfo = {
+  labels : trialnum,
+  datasets : [{
+    label : 'SQRT2 by Trial',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'blue',
+    data : sqrt2try,
+    tension : 0.5
+   },
+   {
+    label : 'SQRT2 (1.4142356)',
+    backgroundColor : ['gray', 'green'],
+    borderColor : 'red',
+    data : sqrt2val,
+    tension : 0.5
+   },
+   ]
+}
+const config = {
+  type : 'line',
+  data : datainfo
+}
+mychart = new Chart(document.getElementById("myChart"), config)
+</script>
+</body></html>
+첨부파일(1개)
