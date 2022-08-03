@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <ul id="ul"></ul>
+        <button id="a">버튼</button>
+        <script>
+            var ul = document.querySelector("ul");
+            var bt = document.querySelector("button");
+//         
+            cnt = 1
+
+            bt.addEventListener('click', bclick)
+            ul.addEventListener('click', ulclick) 
+        
+            function bclick(){
+                document.querySelector("ul").innerHTML += "<li>새 내용" + cnt + "</li>"
+                cnt++
+            }
+
+            function ulclick(e){
+                Li = document.getElementsByTagName("li")
+                for(i=0;i<Li.length;i++){
+                    Li[i].style.background = "white"
+                }
+                e.target.style.background = "orange"
+                this.style.background = "white"
+            }
+
+
+            
+
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

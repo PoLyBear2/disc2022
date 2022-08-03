@@ -1,0 +1,15 @@
+<script>
+    mydata = [1,2,3,4,5]
+    
+    for(i=0; i<50;i++){
+        mydata.push(Math.floor(Math.random()*100))
+    }
+    sum = 0
+    for(j=0; j<mydata.length; j++){
+        sum += mydata[j]
+    }
+    average = sum/mydata.length
+    mydata.push(sum)
+    mydata.push(average)
+    alert("총합"+sum+"<br>"+"평균"+average)
+</script>

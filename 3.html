@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <button id="sum"></button>
+        <button id="sum"></button>
+        <button id="sum"></button>
+        <script>
+            var bt = document.getElementsByTagName("button")
+            for(i=0;i<bt.length;i++){
+                bt[i].onclick = function(e){
+                    e.target.innerHTML = (Jinsu.age + Chulsu.age)/2
+                    Jinsu.age++
+                    Chulsu.age++
+                }
+            }
+            var Jinsu={
+                name:"Jinsu",
+                age:21
+            }
+            var Chulsu={
+                name:"Chulsu",
+                age:21
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

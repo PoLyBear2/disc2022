@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>10의 세제곱근 구하기</title>
+        <h1 id="a">음?</h1>
+        <script>
+            low = 2
+            high = 3
+            mid = nn(low, high)
+            cnt = 0
+            a = cubic(mid)
+            while(Math.abs(a-10)>=0.00000001){
+                if (a<10){
+                    low = (5*low + mid)/6
+                    mid = nn(low, high)
+                    a = cubic(mid)
+                }
+                else if (a>10){
+                    high = (5*high + mid)/6
+                    mid = nn(low, high)
+                    a = cubic(mid)
+                }
+                cnt++
+            }
+            var h1 = document.getElementById("a")
+            h1.innerHTML = "tries: "+ cnt +"<br/>"+ "cube root: "+mid
+
+
+            function cubic(a){
+                return a*a*a
+            }
+
+            function nn(a, b){
+                return (a+b)/2
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+    </body>
+</html>
