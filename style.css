@@ -1,4 +1,6 @@
-body{ width:100%; height: 100%}
+body{
+    background: rgba(111, 141, 206, 0.247); 
+    width:100%; height: 100%}
 
 .container{
 	position: absolute;
@@ -18,6 +20,7 @@ body{ width:100%; height: 100%}
 
 
 .wrapper > .page{ 
+    
 	position: absolute;
 	width: 100%; height: 100%;
 	position: absolute;
@@ -25,15 +28,27 @@ body{ width:100%; height: 100%}
 	padding-top: 10px;
 	backface-visibility: hidden;
 }
+
+.ranking{
+    list-style-type: none;
+    font-size: 0.7em;
+}
+
 div#in_page {
 	margin: 0 auto;
-	width: 1554px;
+	width: 80vw;
 	height: 100%;
 	text-align: left;
 	min-height: 300px;
 	margin: 0 auto;
 }
-header, footer, aside, section {
+
+div#info{
+    width: 100vw;
+    height: 66%
+}
+
+footer, aside, section {
 	border: 1px solid #999;
 	margin: 5px;
 	padding: 10px;
@@ -43,26 +58,44 @@ header {
 	background-color: red;
 }
 
+/* header h2{
+    position:absolute;
+    top:1vw;
+    left:10vw;
+    font-size: 1em;
+} */
+
+header a{
+    color: white;
+    background: black;
+    text-decoration: none;
+    font-size: 2em;
+    font-style: initial;
+    
+}
+
+
 #top_logo{
 	text-align: left;
 }
 section, aside {
 	float: left;
-	height: 1000px;
+	height: 100%;
 }
 
 section {
-	background-color: green;	
-	width: 604px; 
+
+	background-color: rgb(182, 202, 185);	
+	width: 30%; 
 }
 aside {
-	background-color: goldenrod;
-	width: 250px; 
+	background-color: rgb(182, 202, 185)d;
+	width: 15%; 
 }
 footer {
 	height: 50px;
 	background-color: blue;
-	position: relatiev;
+	position: relative;
 	clear: both;
 }
 article {
@@ -84,6 +117,10 @@ article {
 	background-size: cover;			
 }	
  */
+
+#side_tap{
+    background: rgb(182, 202, 185);
+}
 
 
 
