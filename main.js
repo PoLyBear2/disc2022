@@ -1,3 +1,4 @@
+
 var wrapper = document.querySelector('.wrapper'),
 page = document.querySelectorAll('.page'),
 indicator = document.getElementById('indicator'),
@@ -89,3 +90,21 @@ hammer.on('swiperight', function(e){
 window.onresize = function(){
 	init_page();	
 }
+
+var target = document.querySelector('.btn_open');
+var btnPopClose = document.querySelector('.pop_wrap .btn_close');
+var targetID;
+
+// 팝업 열기
+
+  target.addEventListener('click', function(){
+    targetID = this.getAttribute('href');
+    document.querySelector(targetID).style.display = 'block';
+  });
+
+
+// 팝업 닫기
+
+  btnPopClose.addEventListener('click', function(){
+    this.parentNode.parentNode.style.display = 'none';
+  });
