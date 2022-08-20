@@ -1,6 +1,10 @@
+
 body{
     background: rgba(111, 141, 206, 0.247); 
     width:100%; height: 100%}
+
+
+a{text-decoration:none;}
 
 .container{
 	position: absolute;
@@ -31,7 +35,7 @@ body{
 
 .ranking{
     list-style-type: none;
-    font-size: 0.7em;
+    font-size: 1em;
 }
 
 div#in_page {
@@ -43,18 +47,14 @@ div#in_page {
 	margin: 0 auto;
 }
 
-div#info{
-    width: 100vw;
-    height: 66%
-}
+
 
 footer, aside, section {
-	border: 1px solid #999;
-	margin: 5px;
-	padding: 10px;
+	border: 0.1% solid #999;
+	margin: 0.5%;
+	padding: 1%;
 }
 header {
-	height: 50px;
 	background-color: red;
 }
 
@@ -74,36 +74,65 @@ header a{
     
 }
 
-
-#top_logo{
-	text-align: left;
+img{
+	width: 100%;
+	height: 100%;
+	
+	object-fit: fill;
 }
+
 section, aside {
 	float: left;
 	height: 100%;
 }
 
-section {
+section {	
+	width: 28.5%; 
+}
 
-	background-color: rgb(182, 202, 185);	
-	width: 30%; 
+section h3{
+	margin:0;
 }
 aside {
-	background-color: rgb(182, 202, 185)d;
+	margin-left: 0;
 	width: 15%; 
 }
-footer {
-	height: 50px;
-	background-color: blue;
-	position: relative;
-	clear: both;
-}
+
 article {
-	width: 90%;
-	margin: 20px;
-	background-color: #999;
+	width: 100%;
+	border:0.1px solid black;
+	background-color: white;
 }
 
+article h3{
+	background: black;
+	color: white;
+	margin:0;
+}
+
+article ul{
+	padding:0;
+	font-size: 0.96vw;
+	font-style: oblique;
+	list-style: none;
+}
+article ul li{
+	margin: 0.4%;
+	border-color: black;
+}
+
+article ul li a{
+	color:black;
+}
+
+article ul li a :hover{
+	text-decoration: underline;
+}
+
+#side_tap p{
+	margin:0;
+	background: black;
+}
 /* .page > h1{ 
 	padding: 1px; 
 	color: white;
@@ -118,16 +147,14 @@ article {
 }	
  */
 
-#side_tap{
-    background: rgb(182, 202, 185);
-}
+
 
 
 
 #indicator{ 
 	text-align: center; margin-top: 20px;
 	position: absolute;
-	left: 0;right: 0; bottom: 20px;
+	right: 3%; bottom: 20px;
 }
 
 #indicator li{
@@ -141,5 +168,180 @@ article {
 }
 #indicator li.active{ 
 	background-color: rgba(50%,50%,50%, 0.5);
+	color: white;
+}
+
+#section2{
+	margin-right: 0;
+}
+
+#info{
+    width: 100vw;
+    height: 50%;
+}
+
+#side_table{
+	
+	margin: 0 ;
+	padding-inline-start: 0;
+}
+
+
+
+
+[name="slide"] {display: none;}
+.slidebox {width: 100%;  margin:0;margin-top:0.5%}
+
+.slidebox .slidelist{
+	padding:0;
+	white-space:nowrap;
+	font-size: 0;
+	overflow: hidden;
+}
+.slidebox .slideitem{
+	position:relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	transition: all .3s;
+}
+.slidebox .slideitem label{
+	width:5%; height: 5%;
+	position:absolute;
+	z-index: 99;
+	top: 50%;
+	padding:20px;
+	transform: translateY(15%);
+	border-radius:100%;
+	cursor: pointer;
+}
+.slideitem div a{
+	width:100%;
+	height:100%;
+}
+
+.slidebox img {max-width:100%; height: 15vw;}
+
+label.left {
+	left:3%;
+	background-color:#5F5F5F;
+	background-image:url('images/leftarrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+label.right {
+	right:3%;
+	background-color:#5F5F5F;
+	background-image:url('images/rightarrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+
+.paginglist {text-align:center;padding:30px 0;}
+.paginglist > li {display:inline-block;vertical-align:middle;margin:0 10px;}
+.paginglist > li > label {display:block;padding:10px 30px;border-radius:10px;background:#ccc;cursor:pointer;}
+.paginglist > li:hover > label {background:#333;}
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+
+@keyframes slide01 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:-300%;}
+	98% {left:-300%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+
+table{border:1px}
+.wrap{width:100%; height:100%;padding:10px;}
+
+.btn_open{margin:0; color: white;}
+.pop_wrap{position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.5);
+	 font-size:0; text-align:center;}
+.pop_wrap:after{display:inline-block; height:100%; vertical-align:middle; content:'';}
+.pop_wrap .pop_inner{display:inline-block; 
+	padding:20px 30px; background:#fff; 
+	vertical-align:middle; font-size:15px; z-index: 99;}
+
+
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:3px 20px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:3px 20px;word-break:normal;}
+.tg .tg-tcrt{font-family:Arial, Helvetica, sans-serif !important;text-align:center;vertical-align:top}
+.tg .tg-i7zr{font-family:Arial, Helvetica, sans-serif !important;text-align:left;vertical-align:top}
+.tg .tg-3zs4{background-color:#010066;color:#ffffff;font-family:Impact, Charcoal, sans-serif !important;text-align:center;
+  vertical-align:top}
+.tg .tg-jkqp{background-color:#cb0000;color:#f8ff00;font-family:Arial, Helvetica, sans-serif !important;text-align:center;
+  vertical-align:top}
+.tg .tg-lcf4{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;text-align:center;vertical-align:top}
+.tg .tg-j5n6{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;text-align:left;vertical-align:top}
+.tg .tg-nh3f{background-color:#656565;color:#ffffff;font-family:Arial, Helvetica, sans-serif !important;text-align:center;
+  vertical-align:top}
+
+
+#side_table table{
+	width:100%;
+	height: 45%;
+	border: 0.1px solid rgb(2, 2, 2);
+	background: white;
+	
+}
+#side_table p{
+	margin: 0;
+}
+
+#side_table table td, th{
+	width:20%;
+
+	font-size: 0.9vw;
+}
+
+#side_table th{
+	background: black;
 	color: white;
 }
