@@ -1,80 +1,557 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="author=" content="tailofmoon">
-    <title>동적 웹페이지 프로젝트</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="style.css">
-
-
-
-</head>
-<body>
-
-    <div class="container">
-		<div class="wrapper">
-			<div class="page">
-                <div id="in_page">
-                    <!--헤더시작-->
-                    <header>
-                        <a href="index.html">NBA PART</h2>
+   <header>
+                        <a href="index.html">NBA PART</a>
                     </header>
+
+                    <div class="slidebox">
+                        <input type="radio" name="slide" id="slide01" checked>
+                        <input type="radio" name="slide" id="slide02">
+                        <input type="radio" name="slide" id="slide03">
+                        <input type="radio" name="slide" id="slide04">
+                        <ul class="slidelist">
+                          <li class="slideitem">
+                            <div>
+                              <label for = "slide04" class="left"></label>
+                              <label for = "slide02" class="right"></label>
+                              <a href="https://mania.kr/g2/bbs/board.php?bo_table=maniazine&wr_id=229569">
+                                <img class="inner" src="images/product1.png" ></a>
+                            </div>
+                          </li>
+                          <li class="slideitem">
+                            <div>
+                              <label for = "slide01" class="left"></label>
+                              <label for = "slide03" class="right"></label>
+                              <a href="https://mania.kr/g2/bbs/board.php?bo_table=maniazine&wr_id=229548">
+                                <img class="inner" src="images/product2.png" ></a>
+                            </div>
+                          </li>
+                          <li class="slideitem">
+                            <div>
+                              <label for = "slide02" class="left"></label>
+                              <label for = "slide04" class="right"></label>
+                              <a href="https://mania.kr/g2/bbs/board.php?bo_table=maniazine&wr_id=229499">
+                                <img class="inner" src="images/product3.png" ></a>
+                            </div>
+                          </li>
+                          <li class="slideitem">
+                            <div>
+                              <label for = "slide03" class="left"></label>
+                              <label for = "slide01" class="right"></label>
+                              <a href="https://mania.kr/g2/bbs/board.php?bo_table=maniazine&wr_id=229519">
+                                <img class="inner" src="images/product4.png" ></a>
+                            </div>
+                          </li>
+                        </ul>
+                  
+                  
+                      </div>
+
                     <!--네비게이션-->
                     <div id="info">
                         <aside id="side_tap">
-                            <p>순위</p>
-                            <ul>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                                <li class="ranking"><a href="">link</a></li>
-                            </ul>
+                          <p><a href="#pop_info_1" class="btn_open">&nbsp;Ranking</a></p>
+                            <ul id="side_table">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>순&nbsp</th>
+                                    <th>팀</th>
+                                    <th>승</th>
+                                    <th>패</th>
+                                    <th>&nbsp;승률</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>PS</td>
+                                    <td>64&nbsp</td>
+                                    <td>18</td>
+                                    <td>&nbsp;0.780</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>MG</td>
+                                    <td>56&nbsp</td>
+                                    <td>26</td>
+                                    <td>&nbsp;0.683</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>GSW</td>
+                                    <td>53&nbsp</td>
+                                    <td>29</td>
+                                    <td>&nbsp;0.646</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4</td>
+                                    <td>DM</td>
+                                    <td>52&nbsp</td>
+                                    <td>30</td>
+                                    <td>&nbsp;0.634</td>
+                                  </tr>
+                                  <tr>
+                                    <td>5</td>
+                                    <td>UJ</td>
+                                    <td>49&nbsp</td>
+                                    <td>33</td>
+                                    <td>&nbsp;0.598</td>
+                                  </tr>
+                                  <tr>
+                                    <td>6</td>
+                                    <td>DN</td>
+                                    <td>48&nbsp</td>
+                                    <td>34</td>
+                                    <td>&nbsp;0.585</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7</td>
+                                    <td>MT</td>
+                                    <td>46&nbsp</td>
+                                    <td>36</td>
+                                    <td>&nbsp;0.561</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8</td>
+                                    <td>LAC</td>
+                                    <td>42&nbsp</td>
+                                    <td>40</td>
+                                    <td>&nbsp;0.512</td>
+                                  </tr>
+                                </tbody>
+                                </table>
+                            
+                                </br>
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <th><p><a href="#pop_info_1" class="btn_open">순&nbsp</a></p></th>
+                                      <th>팀</th>
+                                      <th>승</th>
+                                      <th>패</th>
+                                      <th>&nbsp;승률</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>MH</td>
+                                      <td>53&nbsp</td>
+                                      <td>29</td>
+                                      <td>&nbsp;0.646</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>BC</td>
+                                      <td>51&nbsp</td>
+                                      <td>31</td>
+                                      <td>&nbsp;0.622</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>MB</td>
+                                      <td>51&nbsp</td>
+                                      <td>31</td>
+                                      <td>&nbsp;0.622</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>P76</td>
+                                      <td>51&nbsp</td>
+                                      <td>31</td>
+                                      <td>&nbsp;0.622</td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>TR</td>
+                                      <td>48&nbsp</td>
+                                      <td>34</td>
+                                      <td>&nbsp;0.585</td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>CB</td>
+                                      <td>46&nbsp</td>
+                                      <td>36</td>
+                                      <td>&nbsp;0.561</td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>BKN</td>
+                                      <td>44&nbsp</td>
+                                      <td>38</td>
+                                      <td>&nbsp;0.537</td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td>CC</td>
+                                      <td>44&nbsp</td>
+                                      <td>38</td>
+                                      <td>&nbsp;0.537</td>
+                                    </tr>
+                                  </tbody>
+                                  </table>
+                              </ul>
+                            
+                            <div class="wrap">
+                              
+                            
+                            
+                              <div id="pop_info_1" class="pop_wrap" style="display:none;">
+                                <div class="pop_inner">
+                                  <p class="dsc">
+                                    <table class="tg">
+                                      <thead>
+                                        <tr>
+                                          <th class="tg-3zs4" colspan="7">WESTERN CONFERENCE</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="tg-jkqp" colspan="2">팀 이름</td>
+                                          <td class="tg-jkqp">승</td>
+                                          <td class="tg-jkqp">패</td>
+                                          <td class="tg-jkqp">승률</td>
+                                          <td class="tg-jkqp">홈</td>
+                                          <td class="tg-jkqp">원정</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">1</td>
+                                          <td class="tg-j5n6">Phoenix Suns</td>
+                                          <td class="tg-lcf4">64</td>
+                                          <td class="tg-lcf4">18</td>
+                                          <td class="tg-lcf4">0.780</td>
+                                          <td class="tg-tcrt">32-9</td>
+                                          <td class="tg-tcrt">32-9</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">2</td>
+                                          <td class="tg-j5n6">Memphis Grizzlies</td>
+                                          <td class="tg-lcf4">56</td>
+                                          <td class="tg-lcf4">26</td>
+                                          <td class="tg-lcf4">0.683</td>
+                                          <td class="tg-tcrt">30-11</td>
+                                          <td class="tg-tcrt">26-15</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">3</td>
+                                          <td class="tg-j5n6">Golden State Warriors</td>
+                                          <td class="tg-lcf4">53</td>
+                                          <td class="tg-lcf4">29</td>
+                                          <td class="tg-lcf4">0.646</td>
+                                          <td class="tg-tcrt">31-10</td>
+                                          <td class="tg-tcrt">22-19</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">4</td>
+                                          <td class="tg-j5n6">Dallas Mavericks</td>
+                                          <td class="tg-lcf4">52</td>
+                                          <td class="tg-lcf4">30</td>
+                                          <td class="tg-lcf4">0.634</td>
+                                          <td class="tg-tcrt">29-12</td>
+                                          <td class="tg-tcrt">23-18</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">5</td>
+                                          <td class="tg-j5n6">Utah Jazz</td>
+                                          <td class="tg-lcf4">49</td>
+                                          <td class="tg-lcf4">33</td>
+                                          <td class="tg-lcf4">0.598</td>
+                                          <td class="tg-tcrt">29-12</td>
+                                          <td class="tg-tcrt">20-21</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">6</td>
+                                          <td class="tg-j5n6">Denver Nuggets</td>
+                                          <td class="tg-lcf4">48</td>
+                                          <td class="tg-lcf4">34</td>
+                                          <td class="tg-lcf4">0.585</td>
+                                          <td class="tg-tcrt">23-18</td>
+                                          <td class="tg-tcrt">25-16</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">7</td>
+                                          <td class="tg-j5n6">Minnesota Timverwolves</td>
+                                          <td class="tg-lcf4">46</td>
+                                          <td class="tg-lcf4">36</td>
+                                          <td class="tg-lcf4">0.561</td>
+                                          <td class="tg-tcrt">26-15</td>
+                                          <td class="tg-tcrt">20-21</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">8</td>
+                                          <td class="tg-j5n6">Los Angeles Clippers</td>
+                                          <td class="tg-lcf4">42</td>
+                                          <td class="tg-lcf4">40</td>
+                                          <td class="tg-lcf4">0.512</td>
+                                          <td class="tg-tcrt">25-16</td>
+                                          <td class="tg-tcrt">17-24</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">9</td>
+                                          <td class="tg-j5n6">New Orleans Pelicans</td>
+                                          <td class="tg-lcf4">36</td>
+                                          <td class="tg-lcf4">46</td>
+                                          <td class="tg-lcf4">0.439</td>
+                                          <td class="tg-tcrt">19-22</td>
+                                          <td class="tg-tcrt">17-24</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">10</td>
+                                          <td class="tg-j5n6">San Antonio Spurs</td>
+                                          <td class="tg-lcf4">34</td>
+                                          <td class="tg-lcf4">48</td>
+                                          <td class="tg-lcf4">0.415</td>
+                                          <td class="tg-tcrt">16-25</td>
+                                          <td class="tg-tcrt">18-23</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">11</td>
+                                          <td class="tg-j5n6">Los Angeles Lakers</td>
+                                          <td class="tg-lcf4">33</td>
+                                          <td class="tg-lcf4">49</td>
+                                          <td class="tg-lcf4">0.402</td>
+                                          <td class="tg-tcrt">21-20</td>
+                                          <td class="tg-tcrt">12-29</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">12</td>
+                                          <td class="tg-j5n6">Sacramento Kings</td>
+                                          <td class="tg-lcf4">30</td>
+                                          <td class="tg-lcf4">52</td>
+                                          <td class="tg-lcf4">0.366</td>
+                                          <td class="tg-tcrt">16-25</td>
+                                          <td class="tg-tcrt">14-27</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">13</td>
+                                          <td class="tg-j5n6">Portland Trail Blazers</td>
+                                          <td class="tg-lcf4">27</td>
+                                          <td class="tg-lcf4">55</td>
+                                          <td class="tg-lcf4">0.329</td>
+                                          <td class="tg-tcrt">17-24</td>
+                                          <td class="tg-tcrt">10-31</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-lcf4">14</td>
+                                          <td class="tg-j5n6">Oklahoma City Thunder</td>
+                                          <td class="tg-lcf4">24</td>
+                                          <td class="tg-lcf4">58</td>
+                                          <td class="tg-lcf4">0.293</td>
+                                          <td class="tg-tcrt">12-29</td>
+                                          <td class="tg-tcrt">12-29</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-i7zr">15</td>
+                                          <td class="tg-i7zr">Houston Rockets</td>
+                                          <td class="tg-tcrt">20</td>
+                                          <td class="tg-tcrt">62</td>
+                                          <td class="tg-tcrt">0.244</td>
+                                          <td class="tg-tcrt">11-30</td>
+                                          <td class="tg-tcrt">9-32</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="tg-nh3f" colspan="2">Conference Total</td>
+                                          <td class="tg-nh3f">614</td>
+                                          <td class="tg-nh3f">616</td>
+                                          <td class="tg-nh3f">0.499</td>
+                                          <td class="tg-nh3f"></td>
+                                          <td class="tg-nh3f"></td>
+                                        </tr>
+                                      </tbody>
+                                      </table>
+                                      <table class="tg">
+                                        <thead>
+                                          <tr>
+                                            <th class="tg-3zs4" colspan="7">EASTERN CONFERENCE</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="tg-jkqp" colspan="2">팀 이름</td>
+                                            <td class="tg-jkqp">승</td>
+                                            <td class="tg-jkqp">패</td>
+                                            <td class="tg-jkqp">승률</td>
+                                            <td class="tg-jkqp">홈</td>
+                                            <td class="tg-jkqp">원정</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">1</td>
+                                            <td class="tg-j5n6">Miami Heat</td>
+                                            <td class="tg-lcf4">53</td>
+                                            <td class="tg-lcf4">29</td>
+                                            <td class="tg-lcf4">0.646</td>
+                                            <td class="tg-tcrt">29-12</td>
+                                            <td class="tg-tcrt">24-17</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">2</td>
+                                            <td class="tg-j5n6">Boston Celtics</td>
+                                            <td class="tg-lcf4">51</td>
+                                            <td class="tg-lcf4">31</td>
+                                            <td class="tg-lcf4">0.622</td>
+                                            <td class="tg-tcrt">28-13</td>
+                                            <td class="tg-tcrt">23-18</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">3</td>
+                                            <td class="tg-j5n6">Milwaukee Bucks</td>
+                                            <td class="tg-lcf4">51</td>
+                                            <td class="tg-lcf4">31</td>
+                                            <td class="tg-lcf4">0.622</td>
+                                            <td class="tg-tcrt">27-14</td>
+                                            <td class="tg-tcrt">24-17</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">4</td>
+                                            <td class="tg-j5n6">Phuladelphia 76ers</td>
+                                            <td class="tg-lcf4">51</td>
+                                            <td class="tg-lcf4">31</td>
+                                            <td class="tg-lcf4">0.622</td>
+                                            <td class="tg-tcrt">24-17</td>
+                                            <td class="tg-tcrt">27-14</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">5</td>
+                                            <td class="tg-j5n6">Toronto Raptors</td>
+                                            <td class="tg-lcf4">48</td>
+                                            <td class="tg-lcf4">34</td>
+                                            <td class="tg-lcf4">0.585</td>
+                                            <td class="tg-tcrt">24-17</td>
+                                            <td class="tg-tcrt">24-17</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">6</td>
+                                            <td class="tg-j5n6">Chicago Bulls</td>
+                                            <td class="tg-lcf4">46</td>
+                                            <td class="tg-lcf4">36</td>
+                                            <td class="tg-lcf4">0.561</td>
+                                            <td class="tg-tcrt">27-14</td>
+                                            <td class="tg-tcrt">19-22</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">7</td>
+                                            <td class="tg-j5n6">Brooklyn Nets</td>
+                                            <td class="tg-lcf4">44</td>
+                                            <td class="tg-lcf4">38</td>
+                                            <td class="tg-lcf4">0.537</td>
+                                            <td class="tg-tcrt">20-21</td>
+                                            <td class="tg-tcrt">24-17</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">8</td>
+                                            <td class="tg-j5n6">Cleveland Cavaliers</td>
+                                            <td class="tg-lcf4">44</td>
+                                            <td class="tg-lcf4">38</td>
+                                            <td class="tg-lcf4">0.537</td>
+                                            <td class="tg-tcrt">25-16</td>
+                                            <td class="tg-tcrt">19-22</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">9</td>
+                                            <td class="tg-j5n6">Atlanta Hawks</td>
+                                            <td class="tg-lcf4">43</td>
+                                            <td class="tg-lcf4">39</td>
+                                            <td class="tg-lcf4">0.534</td>
+                                            <td class="tg-tcrt">27-14</td>
+                                            <td class="tg-tcrt">16-25</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">10</td>
+                                            <td class="tg-j5n6">Charlotte Hornets</td>
+                                            <td class="tg-lcf4">43</td>
+                                            <td class="tg-lcf4">39</td>
+                                            <td class="tg-lcf4">0.524</td>
+                                            <td class="tg-tcrt">22-19</td>
+                                            <td class="tg-tcrt">21-20</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">11</td>
+                                            <td class="tg-j5n6">New York Knicks</td>
+                                            <td class="tg-lcf4">37</td>
+                                            <td class="tg-lcf4">45</td>
+                                            <td class="tg-lcf4">0.451</td>
+                                            <td class="tg-tcrt">17-24</td>
+                                            <td class="tg-tcrt">20-21</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">12</td>
+                                            <td class="tg-j5n6">Washington Wizards</td>
+                                            <td class="tg-lcf4">35</td>
+                                            <td class="tg-lcf4">47</td>
+                                            <td class="tg-lcf4">0.427</td>
+                                            <td class="tg-tcrt">21-20</td>
+                                            <td class="tg-tcrt">14-27</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">13</td>
+                                            <td class="tg-j5n6">Indiana Pacers</td>
+                                            <td class="tg-lcf4">25</td>
+                                            <td class="tg-lcf4">57</td>
+                                            <td class="tg-lcf4">0.305</td>
+                                            <td class="tg-tcrt">16-25</td>
+                                            <td class="tg-tcrt">9-32</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-lcf4">14</td>
+                                            <td class="tg-j5n6">Detroit Pistons</td>
+                                            <td class="tg-lcf4">23</td>
+                                            <td class="tg-lcf4">59</td>
+                                            <td class="tg-lcf4">0.280</td>
+                                            <td class="tg-tcrt">13-28</td>
+                                            <td class="tg-tcrt">10-31</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-i7zr">15</td>
+                                            <td class="tg-i7zr">Orlando Magic</td>
+                                            <td class="tg-tcrt">22</td>
+                                            <td class="tg-tcrt">60</td>
+                                            <td class="tg-tcrt">0.268</td>
+                                            <td class="tg-tcrt">12-29</td>
+                                            <td class="tg-tcrt">10-31</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-nh3f" colspan="2">Conference Total</td>
+                                            <td class="tg-nh3f">616</td>
+                                            <td class="tg-nh3f">614</td>
+                                            <td class="tg-nh3f">0.501</td>
+                                            <td class="tg-nh3f"></td>
+                                            <td class="tg-nh3f"></td>
+                                          </tr>
+                                        </tbody>
+                                        </table></p>
+                                  <button type="button" class="btn_close">닫기</button>
+                                </div>
+                              </div>
                         </aside>
                         <!--콘텐츠부분-->
                         <section id="section">
-                            <p>뉴스</p>
                             <article>
-                                <p>article</p>
+                                <h3>&nbsp;News</h3>
+                                <ul>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110894">케빈 듀란트를 설득하기 위해 카멜로 앤서니와 계약하는 것에 …</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110876">할리버튼을 넥스트 레지 밀러로 보는 인디애나, 그를 중심으로 …</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110873">가장 트레이드가 유력한 뉴욕 선수로 데릭 로즈를 뽑은 동부팀 …</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110852">댈러스와 콜린 섹스턴 S&T 협상을 가진 클리블랜드 </a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110848">리그에서는 브루클린이 카멜로 앤서니와 계약한다는 얘기가 돌…</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110759">샤킬 오닐 - 현재 세계 최고의 선수는 스테픈 커리다.</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110753">르브론의 연장계약 관련 소식들</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110737">닉 프레델-조만간 레이커스와 협상을 재개할수도있는 브루클린</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110735">주말 크로스오버 프로암 경기에 참여하는 르브론 제임스와…</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110728">카이리 어빙을 신뢰하지 않는 브루클린 팀과 조직</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110714">케빈 듀란트를 위해 스카티 반즈를 포기할 것이라고 NBA …</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110711">마이애미가 미첼이나 듀란트 트레이드를 하지 말고, 그대로 갔…</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110710">Paris Basketball과 재계약한 주한 베가린과 이스마엘 카마가테</a></li></br>
+                                  <li><a href="https://mania.kr/g2/bbs/board.php?bo_table=news&wr_id=1110704">보스턴 원정팀 라커룸을 고등학교 라커룸 수준이라 비난한 …</a></li>
+                                </ul>
                             </article>
                         </section>
                         <section id="section2">
-                            <p>미디어</p>
                             <article>
-                                <p>article</p>
+                              <h3>&nbsp;Videos</h3>
+                              <iframe width="100%" height="32%" src="https://www.youtube.com/embed/UvuW0xUCV6g?start=14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <iframe width="100%" height="32%" src="https://www.youtube.com/embed/u5njnnND3vc?start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <iframe width="100%" height="32%" src="https://www.youtube.com/embed/0rnMcrm-hgg?start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <iframe width="100%" height="32%" src="https://www.youtube.com/embed/iNmHkKctoPM?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </article>
                         </section>
                     </div>
-                    <!--사이드바-->
-            
-                    <!--풋터-->
-                    <footer id="footer">footer</footer>
-                </div>
-			</div>
-			<div class="page">
-				<header><h1>EPL Part</h1></header>
-                <div id="menu"></div>
-				<section class="icons">
-
-				</section>				
-			</div>
-			
-			</div>
-		</div>
-	</div>
-	<ul id=indicator>
-	</ul>
-
-    <script src = "main.js"></script>
-</body>
-
-</html>
