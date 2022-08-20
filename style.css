@@ -111,9 +111,7 @@ article h3{
 }
 
 article ul{
-	padding:0;
-	font-size: 0.96vw;
-	font-style: oblique;
+	font-size: 0.7vw;
 	list-style: none;
 }
 article ul li{
@@ -338,7 +336,7 @@ table{border:1px}
 #side_table table td, th{
 	width:20%;
 
-	font-size: 0.9vw;
+	font-size: 0.7vw;
 }
 
 #side_table th{
