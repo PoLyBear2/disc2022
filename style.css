@@ -118,7 +118,8 @@ article h3{
 }
 
 article ul{
-	font-size: 0.7vw;
+	padding:1vmin;
+	font-size: 1.1vmin;
 	list-style: none;
 }
 article ul li{
