@@ -40,7 +40,7 @@ a{text-decoration:none;}
 
 div#in_page {
 	margin: 0 auto;
-	width: 80vw;
+	width: 100vmin;
 	height: 100%;
 	text-align: left;
 	min-height: 300px;
@@ -174,7 +174,7 @@ article ul li a :hover{
 }
 
 #info{
-    width: 100vw;
+    width: 125vmin;
     height: 50%;
 }
 
