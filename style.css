@@ -87,8 +87,15 @@ section, aside {
 }
 
 section {	
-	width: 28.5%; 
+	width: 28.5%;
+	overflow-y: scroll; 
 }
+
+section::-webkit-scrollbar {
+	width:0px;
+	height:0px;
+}
+
 
 section h3{
 	margin:0;
@@ -171,6 +178,12 @@ article ul li a :hover{
 
 #section2{
 	margin-right: 0;
+	overflow-y: scroll;
+	
+}
+#section2::-webkit-scrollbar {
+	width:0px;
+	height:0px;
 }
 
 #info{
