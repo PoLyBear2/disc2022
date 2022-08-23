@@ -88,7 +88,8 @@ hammer.on('swiperight', function(e){
 
 // 창크기 변경시 페이지 초기화
 window.onresize = function(){
-	init_page();	
+	init_page();
+	init_page();
 }
 
 var target = document.querySelector('.btn_open');
